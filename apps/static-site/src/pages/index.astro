@@ -100,3 +100,62 @@ const description = `${REJOT_TAG_LINE}: ${REJOT_DESCRIPTION}`;
     </div>
   </article>
 </Base>
+
+<!-- Fragno Alert Dialog -->
+<div
+  id="fragno-alert-overlay"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50"
+>
+  <div class="mx-4 w-full max-w-md rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
+    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+      ReJot team is now working on Fragno
+    </h2>
+    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+      We've moved our focus to a new project. Check out what we're building!
+    </p>
+    <div class="mt-6 flex justify-end gap-3">
+      <button
+        id="fragno-dismiss"
+        class="rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+      >
+        Dismiss
+      </button>
+      <a
+        href="https://fragno.dev/"
+        class="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+      >
+        Go to Fragno
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY = "fragno-alert-dismissed";
+  const overlay = document.getElementById("fragno-alert-overlay");
+  const dismissBtn = document.getElementById("fragno-dismiss");
+  const continueBtn = document.getElementById("fragno-continue");
+
+  if (!localStorage.getItem(STORAGE_KEY) && overlay) {
+    overlay.classList.remove("hidden");
+    overlay.classList.add("flex");
+  }
+
+  dismissBtn?.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "true");
+    overlay?.classList.add("hidden");
+    overlay?.classList.remove("flex");
+  });
+
+  continueBtn?.addEventListener("click", () => {
+    window.location.href = "https://fragno.dev/";
+  });
+
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      localStorage.setItem(STORAGE_KEY, "true");
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+    }
+  });
+</script>
