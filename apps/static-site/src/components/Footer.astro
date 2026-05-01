@@ -1,4 +1,6 @@
 ---
+import ArrowTopRightOnSquare from "astro-heroicons/outline/ArrowTopRightOnSquare.astro";
+
 import BlueSkyIcon from "./icons/BlueSkyIcon.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import LinkedInIcon from "./icons/LinkedInIcon.astro";
@@ -19,20 +21,23 @@ const today = new Date();
         >Blog</a
       >
       <a
-        href="/about"
-        class="block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-        >About</a
+        href="https://rejot.dev/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
       >
+        Contact
+        <ArrowTopRightOnSquare class="size-3.5 shrink-0 opacity-70" aria-hidden="true" />
+      </a>
       <a
-        href="/contact"
-        class="block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-        >Contact</a
+        href="https://rejot.dev/privacy-policy"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
       >
-      <a
-        href="/privacy-policy"
-        class="block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-        >Privacy Policy</a
-      >
+        Privacy Policy
+        <ArrowTopRightOnSquare class="size-3.5 shrink-0 opacity-70" aria-hidden="true" />
+      </a>
     </div>
 
     <div class="mb-4 flex-1 grow sm:mb-0 sm:mt-4">

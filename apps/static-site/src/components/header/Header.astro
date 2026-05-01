@@ -1,4 +1,5 @@
 ---
+import ArrowTopRightOnSquare from "astro-heroicons/outline/ArrowTopRightOnSquare.astro";
 import Bars3 from "astro-heroicons/outline/Bars3.astro";
 import XMark from "astro-heroicons/outline/XMark.astro";
 
@@ -41,8 +42,15 @@ import ScreenSizeIndicator from "./ScreenSizeIndicator.astro";
         </HeaderLink> -->
         <HeaderLink href="/docs" activeClass="border-b-rejot-red-600">Docs</HeaderLink>
         <HeaderLink href="/blog" activeClass="border-b-rejot-red-600">Blog</HeaderLink>
-        <HeaderLink href="/about" activeClass="border-b-rejot-red-600">About</HeaderLink>
-        <HeaderLink href="/contact" activeClass="border-b-rejot-red-600">Contact</HeaderLink>
+        <a
+          href="https://rejot.dev/contact"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 border-b-4 border-transparent px-2 py-4 text-black no-underline dark:text-white"
+        >
+          Contact
+          <ArrowTopRightOnSquare class="size-4 opacity-70" aria-hidden="true" />
+        </a>
         <a
           href="https://github.com/rejot-dev/rejot/"
           class={`border-b-4 border-transparent px-2 py-4 text-black no-underline dark:text-white`}

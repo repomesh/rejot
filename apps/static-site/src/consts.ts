@@ -1,4 +1,4 @@
-export const REJOT_TITLE = "ReJot";
+export const REJOT_TITLE = "ReJot Sync";
 export const REJOT_TAG_LINE = "Supercharged Replication for Developers";
 export const REJOT_DESCRIPTION =
   "Turn the write-ahead log of your database into an asynchronous communication channel for your services";
